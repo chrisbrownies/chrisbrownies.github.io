@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Brownies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("ndVT_EB_jV7bGsfD9");
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="upper">
+            <div class="logo">
+                <div class="firstLogo">Chris</div>
+                <span>Brownies</span>
+            </div>
+            <div class="right">
+                <a href="#home">Home</a>
+                <a href="#product">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contacts</a>
+            </div>
+            <div class="menu">
+                <span class="lines"></span>
+                <span class="lines"></span>
+                <span class="lines"></span>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="loader">
+        <div class="textLoad">Meet Perfection</div>
+        <div class="textLoads">Chris Brownies</div>
+        <div class="loaderLeft loads"></div>
+        <div class="loaderRight loads"></div>
+    </div>
+
+    <div class="back">
+        <div class="text">
+            Back to top
+        </div>
+        <div class="icon">
+            <ion-icon name="arrow-up-outline"></ion-icon>
+        </div>
+    </div>
+    <div class="menuEl">
+        <a href="#home"><span><ion-icon name="home-outline"></ion-icon> </span> Home</a>
+        <a href="#product"><ion-icon name="fast-food-outline"></ion-icon> Products</a>
+        <a href="#about"><ion-icon name="document-outline"></ion-icon> About</a>
+        <a href="#contact"><ion-icon name="chatbox-ellipses-outline"></ion-icon> Contacts</a>
+    </div>
+
+    <div class="wrapper">
+        <main id="home">
+            <div class="big">
+                <img src="images/bg.jpg" alt="">
+            </div>
+        </main>
+
+        <div id="product">
+            <section>
+                <p>New Products</p>
+                <div class="con">
+                    <div class="products">
+                        <div class="imageCon">
+                            <img src="images/oreo.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>Chris Brownies - Oreos</p>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <div class="imageCon">
+                            <img src="images/nuts.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>Chris Brownies - Nuts</p>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <div class="imageCon">
+                            <img src="images/choco.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>Chris Brownies - Kisses</p>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <div class="imageCon">
+                            <img src="images/mallows.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>Chris Brownies - Mallows</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <p>Upcoming Products</p>
+                <div class="con">
+                    <div class="products">
+                        <div class="imageCon">
+                            <img src="images/nutella.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>Chris Brownies - Nutella</p>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <div class="imageCon">
+                            <img src="images/butter.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>Chris Brownies - Peanut butter</p>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <div class="imageCon">
+                            <img src="images/caramel.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>Chris Brownies - Caramel</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div id="about" class="about">
+            <h1>About Us</h1>
+            <p>Welcome to Chris Brownies, where indulgence meets innovation! At Chris Brownies, we're passionate about
+                crafting decadent treats that awaken your taste buds and leave you craving for more. Our journey began
+                with a simple idea: to create brownies that are not just delicious but also delightful for the planet.
+            </p>
+            <button>Contact us</button>
+        </div>
+
+        <div id="contact" class="contact">
+            <div class="left">
+                <h1>Contact us</h1>
+                <p>We'd love to hear from you! If you have any questions, feedback, or simply want to say hello, please
+                    don't hesitate to get in touch with us. Your satisfaction is our top priority, and we're here to
+                    assist you in any way we can.</p>
+            </div>
+                <form class="forms" onSubmit={sendEmail}>
+                    <div class="sent">
+                        Email sent successfuly <span class="icons"> <ion-icon name="checkmark-circle-outline"></ion-icon></span>
+                    </div>
+                    <div class="error">
+                       inputs field cannot be empty <span class="icons"> <ion-icon name="close-circle-outline"></ion-icon></span>
+                    </div>
+                    <div class='firstForm'>
+                        <input aria-required="true" class="fullname" type='text' placeholder='Fullname' name='user_name' required></input>
+                        <input class="email" type='email' placeholder='Email' name='user_email' required></input>
+                    </div>
+                    <div class="txt">
+                        <textarea class="msg" placeholder='MESSAGE' maxlength="300" name='message'></textarea>
+                    </div>
+                    <button class="sendBtn" type='submit'>send</button>
+                </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+
+</html>
